@@ -1,0 +1,27 @@
+<view class="mod-list">
+  <view class="left">
+    <image src="{{list.images.large}}"></image>
+  </view>
+  <view class="right">
+    <view class="row">
+      {{list.original_title}} {{list.year}}
+    </view>
+    <view class="row">
+      评分：{{list.rating.average}}
+    </view>
+    <view class="row">
+      导演：
+      <text wx:for="{{list.directors}}" wx:for-item="c" class="r10">{{c.name}}</text>
+    </view>
+    <view class="row">
+      主演：
+      <text wx:for="{{list.casts}}" wx:for-item="d" class="r10">{{d.name}}</text>
+    </view>
+  </view>
+</view>
+<view>
+<view>剧情简介</view>
+<view class="page">
+  {{list.summary}}
+</view>
+</view>
